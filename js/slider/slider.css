@@ -1,0 +1,349 @@
+.transition-clear, .transition-clear * {
+    transition-duration: 0s !important;
+}
+.slider {
+    position: relative;
+}
+.slider .slide-image, .slider .slide-image img, .slider .slide-image .caption {
+    transition-duration: 1.5s;
+}
+.slider .slide-image {
+    opacity: 0;
+    transform-origin: 50% 50% 0;
+}
+.slider .slide-image.current {
+    opacity: 1;
+}
+.slider.transition-rotatezoomout .slide-image {
+    transform: scale(0) rotate(40deg);
+}
+.slider.transition-rotatezoomout .slide-image.current {
+    transform: scale(1) rotate(0deg);
+}
+.slider.transition-rotatezoomin .slide-image {
+    transform: scale(2) rotate(30deg);
+}
+.slider.transition-rotatezoomin .slide-image.current {
+    transform: scale(1) rotate(0deg);
+}
+.slider.transition-left .slide-image {
+    left: -100%;
+    opacity: 1;
+}
+.slider.transition-left .slide-image.current {
+    left: 0;
+}
+.slider.transition-left .slide-image.current ~ .slide-image {
+    left: 100%;
+}
+.slider.transition-top .slide-image {
+    opacity: 1;
+    top: -100%;
+}
+.slider.transition-top .slide-image.current {
+    top: 0;
+}
+.slider.transition-top .slide-image.current ~ .slide-image {
+    top: 100%;
+}
+.slider.transition-oblique .slide-image {
+    transform: matrix(1, 1, 0, 1, -100%, 0);
+}
+.slider.transition-oblique .slide-image.current {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.slider.transition-oblique .slide-image.current ~ .slide-image {
+    transform: matrix(1, 1, 0, 1, 100%, 0);
+}
+.slider.transition-topfade .slide-image {
+    top: -50%;
+}
+.slider.transition-topfade .slide-image.current {
+    top: 0;
+}
+.slider.transition-simple1 .slide-image .caption {
+    right: 100%;
+}
+.slider.transition-simple1 .slide-image.current .caption {
+    right: 0;
+}
+.slider.transition-zoomin .slide-image {
+    transform: scale(2);
+}
+.slider.transition-zoomin .slide-image.current {
+    transform: scale(1);
+}
+.slider.transition-zoomout .slide-image {
+    transform: scale(0);
+}
+.slider.transition-zoomout .slide-image.current {
+    transform: scale(1);
+}
+.slider.transition-flip .slide-image {
+    transform: scale(-1, 1);
+}
+.slider.transition-flip .slide-image.current {
+    transform: scale(1, 1);
+}
+.slider.transition-cardflip .slide-image {
+    transform: scale(-1, 0.2);
+}
+.slider.transition-cardflip .slide-image.current {
+    transform: scale(1, 1);
+}
+.slider.transition-skewflip .slide-image {
+    transform: skew(90deg, 90deg);
+}
+.slider.transition-skewflip .slide-image.current {
+    transform: skew(0deg, 0deg);
+}
+.slider.theme-dark {
+    background: none repeat scroll 0 0 black;
+    color: white;
+}
+.slider.theme-dark a {
+    color: white;
+}
+.slider.theme-dark .caption {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+}
+.slider.theme-dark .options a {
+    /*color: #91BECC;*/
+	color: #004276;
+}
+.slider.theme-dark .options a:hover {
+    /*color: #D3E5EB;*/
+	color: #cc0000;
+}
+.slider.theme-dark .slide-image {
+    background: none repeat scroll 0 0 black;
+}
+.slider.theme-dark .slide-pager a.current {
+    /*background-color: #91BECC;*/
+	background-color: #cc0000;
+    color: black;
+}
+.slider.theme-dark .loader .spinner {
+    background: url("load_dark.gif") no-repeat scroll 0 0 transparent;
+}
+.slider.theme-light {
+    background: none repeat scroll 0 0 white;
+    color: black;
+}
+.slider.theme-light a {
+    color: #555555;
+}
+.slider.theme-light .caption {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+    color: #555555;
+}
+.slider.theme-light .options a {
+    color: #AAAAAA;
+}
+.slider.theme-light .options a:hover {
+    color: #888888;
+}
+.slider.theme-light .slide-image {
+    background: none repeat scroll 0 0 white;
+}
+.slider.theme-light .slide-pager a.current {
+    background-color: #AAAAAA;
+    color: white;
+}
+.slider.theme-light .loader .spinner {
+    background: url("load_light.gif") no-repeat scroll 0 0 transparent;
+}
+.slider.theme-embed {
+    background: none repeat scroll 0 0 black;
+    color: white;
+}
+.slider.theme-embed a {
+    color: white;
+}
+.slider.theme-embed .caption {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+}
+.slider.theme-embed .options {
+    padding: 0;
+}
+.slider.theme-embed .options * {
+    z-index: 20;
+}
+.slider.theme-embed .options a {
+    color: #91BECC;
+}
+.slider.theme-embed .options a:hover {
+    color: #D3E5EB;
+}
+.slider.theme-embed .options .slide-pager {
+    bottom: 0;
+    left: 8%;
+    overflow: hidden;
+    padding: 3px 10px;
+    position: absolute;
+    text-align: center;
+    width: 80%;
+}
+.slider.theme-embed .options .slide-pager a {
+    background: none repeat scroll 0 0 black;
+    padding: 0 4px;
+}
+.slider.theme-embed .options a.prevSlide, .slider.theme-embed .options a.nextSlide {
+    background: none repeat scroll 0 0 black;
+    bottom: 0;
+    margin: 0;
+    padding: 5px 10px;
+    position: absolute;
+}
+.slider.theme-embed .options a.prevSlide {
+    left: 0;
+}
+.slider.theme-embed .options a.nextSlide {
+    right: 0;
+}
+.slider.theme-embed .slide-image {
+    background: none repeat scroll 0 0 black;
+}
+.slider.theme-embed .slide-pager a.current {
+    background-color: #91BECC;
+    color: black;
+}
+.slider.theme-embed .loader .spinner {
+    background: url("load_dark.gif") no-repeat scroll 0 0 transparent;
+}
+.slider.theme-bottom {
+    background: none repeat scroll 0 0 black;
+    color: white;
+}
+.slider.theme-bottom a {
+    color: white;
+}
+.slider.theme-bottom .caption {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+}
+.slider.theme-bottom .options {
+    background: none repeat scroll 0 0 black;
+    bottom: 0;
+    left: 25%;
+    overflow: hidden;
+    position: absolute;
+    width: 50%;
+    z-index: 20;
+}
+.slider.theme-bottom .options a {
+    color: #91BECC;
+}
+.slider.theme-bottom .options a:hover {
+    color: #D3E5EB;
+}
+.slider.theme-bottom .slide-image {
+    background: none repeat scroll 0 0 black;
+}
+.slider.theme-bottom .slide-pager a.current {
+    background-color: #91BECC;
+    color: black;
+}
+.slider.theme-bottom .loader .spinner {
+    background: url("load_dark.gif") no-repeat scroll 0 0 transparent;
+}
+.slider.no-control {
+    background: none repeat scroll 0 0 black;
+    color: white;
+}
+.slider.no-control .caption {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+}
+.slider.no-control .options {
+    display: none;
+}
+.slider.no-control .loader .spinner {
+    background: url("load_dark.gif") no-repeat scroll 0 0 transparent;
+}
+.slider .options {
+    padding: 3px 10px;
+    text-align: center;
+}
+/*.slider .options a {
+    font-family: Georgia,Serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 2px;
+    text-decoration: none;
+}*/
+.slider .options a {
+  font-family: Arial,Serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 2px;
+  text-decoration: none;
+}
+.slider .slide-pager a {
+    border-radius: 5px 5px 5px 5px;
+    transition-duration: 0.5s;
+}
+.slider .slide-pager a.current {
+    padding: 0 4px;
+}
+.slider .options .prevSlide {
+    float: left;
+}
+.slider .options .nextSlide {
+    float: right;
+}
+.slider.loading > * {
+    display: none;
+}
+.slider .loader {
+    display: none;
+}
+.slider .loader .spinner {
+    display: inline-block;
+    height: 16px;
+    width: 20px;
+}
+.slider.loading .loader {
+    display: block;
+    font-size: 1.8em;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.slider .slide-images {
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.slider .slide-image {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 0;
+}
+.slider .slide-image.current {
+    z-index: 10;
+}
+.slider .slide-image.current img {
+    z-index: 12;
+}
+.slider .slide-image.current .caption {
+    z-index: 13;
+}
+.slider .slide-image a {
+    text-decoration: none;
+}
+.slider .slide-image img {
+    border: medium none;
+    width: 100%;
+    z-index: 2;
+}
+.slider .slide-image .caption {
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.8;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    z-index: 3;
+}

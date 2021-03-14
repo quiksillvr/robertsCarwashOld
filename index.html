@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Roberts Car Wash</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery-ui-1.10.1.custom.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo_table_jui.css" />
+        <link rel="stylesheet" type="text/css" href="skin/blue.monday/jplayer.blue.monday.css">
+        <link rel="stylesheet" type="text/css" href="js/slider/slider.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+        <link rel="stylesheet" type="text/css" href="css/carwash.css" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+        <script src="js/jquery.dataTables.min.js"></script>
+        <script src="js/jPlayer/jquery.jplayer.min.js"></script>
+        <script src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+        <script src="js/jPlayer/add-on/jquery.jplayer.inspector.js"></script>
+        <script src="js/slider/slider.js"></script>
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/carwash.js"></script>
+        <script src="js/home.js"></script>
+        <script src="js/detail.js"></script>
+        <script src="js/automatic.js"></script>
+        <script src="js/selfService.js"></script>
+        <script src="js/nav.js"></script>
+    </head>
+    <body id="carWashBody">
+        <div id="container">
+            <div id="header"></div>
+            <div id="navigation" class="ui-widget-header">
+                <input type="radio" id="navHome" class="homeLink" name="navigation" value="home" checked="checked" /><label id="navHomeLabel" class="navLabel" for="navHome"><i class="fa fa-home"></i> Home</label>
+                <input type="radio" id="navDetailCenter" class="detailLink" name="navigation" value="detail" /><label class="navLabel" for="navDetailCenter"><i class="fa fa-magic"></i> Detail Center</label>
+                <input type="radio" id="navAutomatic" class="automaticLink" name="navigation" value="automatic" /><label class="navLabel" for="navAutomatic"><i class="fa fa-users"></i> Full Service Wash</label>
+                <input type="radio" id="navSelfService" class="selfServiceLink" name="navigation" value="selfservice" /><label class="navLabel" for="navSelfService"><i class="fa fa-user"></i> Self Services</label>
+            </div>
+            <div id="content-container1">
+                <div id="content-container2" class="ui-widget">
+                    <div id="content">
+                        <div id="content-ajax">
+                            <div itemscope itemtype="http://data-vocabulary.org/product" id="siteDescription" class="transparent">
+                                <span itemprop="description">Detailing, full-service automatic and self service bays available. 
+                                    Only professional grade buffers, cleaners and wax are used. Care and commitment are taken 
+                                    into each auto to make sure your baby looks as good as new.</span>
+                            </div>
+                            <div id="detailBlock" class="homeBlock detailLink ui-widget ui-widget-content ui-corner-all">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img id="detailBlockImg" alt="Detailing" src="./images/detail_red_335x235.png" width="335" height="235" />
+                                        </td>
+                                        <td class="homeTextBlock">
+                                            <ul style="margin-bottom: 0px;">
+                                                <li>Certified Detailing Service</li>
+                                                <li>Industry Leading Buffers and Stain Removers</li>
+                                                <li>Fine Comb Custom Care</li>
+                                                <li>New Car Look and Smell</li>
+                                                <li>Light Scratch Removal</li>
+                                                <li>Fortify with Carnuba and Teflon Wax</li>
+                                                <li>Will Pick Up and Deliver (Local Customers)</li>
+                                            </ul>
+                                            <a id="goToDetailPrices" href="#">Click here to see our prices</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="automaticBlock" class="homeBlock automaticLink ui-widget ui-widget-content ui-corner-all">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img id="automaticBlockImg" alt="Automatic" src="./images/automatic_red_335x235.png" width="335" height="235" />
+                                        </td>
+                                        <td class="homeTextBlock">
+                                            <ul>
+                                                <li>Pre-Hand Wash</li>
+                                                <li>During Wash Touch-ups</li>
+                                                <li>Attendant Assistance</li>
+                                                <li>Slow Rotation, Soft Non-Scratch Cloths</li>
+                                                <li>Top-of-the-line Soaps and Cleaning Solutions</li>
+                                                <li>Quality Spray Wax</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="selfServiceBlock" class="homeBlock selfServiceLink ui-widget ui-widget-content ui-default-state ui-corner-all">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img id="selfServiceBlockImg" alt="Self Service" src="./images/selfService_red_335x235.png" width="335" height="235" />
+                                        </td>
+                                        <td class="homeTextBlock">
+                                            <ul>
+                                                <li>Open 24/7</li>
+                                                <li>Cleaned Weekly</li>
+                                                <li>Maintained Daily</li>
+                                                <li>Heated High Pressure Spray</li>
+                                                <li>Scented Foaming Brushes</li>
+                                                <li>Spot Free Rinse</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="products">
+                            <table>
+                                <tr>
+                                    <td><a href="http://www.simoniz.com" target="blank"><img border="0" src="images/products/simoniz_logo.gif" alt="Simoniz, USA Inc" width="141" height="68"></a></td>
+                                    <td><a href="http://www.armorall.com" target="blank"><img border="0" src="images/products/armorAll_logo.jpg" alt="Armor All" width="125" height="125"></a></td>
+                                    <td><a href="http://www.hannacarwash.com" target="blank"><img id="hannaLogo" border="0" src="images/products/hanna_logo.jpg" alt="Hanna Wash" width="171" height="60"></a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="aside">
+                        <div class="sideBlock ui-corner-all">
+                            <p id="creditCardImg"><img src="images/creditCards.png" alt="Major Credit Cards" height="42" width="250"></p>
+                            <p id="creditCardText">All major credit cards are accepted for Automatic and Detailing Services</p>
+                            <p id="giftCertsText">Gift Certificates available, great for holidays or birthdays!</p>
+                        </div>
+                        <div class="sideBlock ui-corner-all">
+                            <h3>
+                                <i class="fa fa-phone fa-flip-horizontal"></i> Contact
+                            </h3>
+                            <p>
+                                Office Phone: (717) 794-5800
+                            </p>
+                        </div>
+                        <div class="sideBlock ui-corner-all">
+                            <h3>
+                                <i class="fa fa-car"></i> Hours of Operation
+                            </h3>
+                            <table id="hours-table" class="hoursAutomatic">
+                                <tr><td class="hoursTitle" colspan="2">Automatic & Detailing</td></tr>
+                                <tr>
+                                    <td class="hours-table-left-col">Monday-Saturday</td>
+                                    <td class="hours-table-right-col">8:30am - 5:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td class="hours-table-left-col">Sunday</td>
+                                    <td class="hours-table-right-col">8:30am - 4:00pm</td>
+                                </tr>
+                                <tr><td colspan="2">Automatic closes if raining</td></tr>
+                            </table>
+                            <table class="hoursSelfServices">
+                                <tr><td class="hoursTitle">Self Services</td></tr>
+                                <tr><td>Open 24/7</td></tr>
+                            </table>
+                        </div>
+                        <div class="sideBlock ui-corner-all">
+                            <h3>
+                                <i class="fa fa-map-marker"></i> Location
+                            </h3>
+                            <p>
+                                14965 Buchanan Trail E<br>Blue Ridge Summit, PA	17214
+                            </p>
+                            <p id="carWashMapContainer">
+                                <iframe id="carWashMap" width="300" height="300" frameborder="0" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=+&amp;q=Roberts+Car+Wash+PA&amp;ie=UTF8&amp;hq=Roberts+Car+Wash&amp;hnear=Pennsylvania&amp;t=h&amp;ll=39.73465,-77.475586&amp;spn=0.158412,0.205307&amp;z=11&amp;output=embed"></iframe><br /><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=+&amp;q=Roberts+Car+Wash+PA&amp;ie=UTF8&amp;hq=Roberts+Car+Wash&amp;hnear=Pennsylvania&amp;t=h&amp;ll=39.73465,-77.475586&amp;spn=0.158412,0.205307&amp;z=11" style="color: #004276;">View Larger Map & Get Directions</a>
+                            </p>
+                        </div>
+                        <div class="sideBlock ui-corner-all">
+                            <h3>
+                                <i class="fa fa-music"></i> Car Wash Radio
+                            </h3>
+                            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                            <div id="jp_container_1" class="jp-audio ui-corner-all">
+                                <div class="jp-type-playlist">
+                                    <div class="jp-gui jp-interface">
+                                        <ul class="jp-controls">
+                                            <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                                            <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                                            <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+                                        </ul>
+                                        <div class="jp-progress">
+                                            <div class="jp-seek-bar">
+                                                <div class="jp-play-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-time-holder">
+                                            <div class="jp-current-time"></div>
+                                            <div class="jp-duration"></div>
+                                        </div>
+                                    </div>
+                                    <div class="jp-title">
+                                        <ul>
+                                            <li id="jpTrackTitle">The Beach Boys - Little Deuce Coupe</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table id="cwPlayList" cellspacing="0" class="ui-corner-all">
+                                <tr><td id="cwPlayListTitle" colspan="2">Playlist</td></tr>
+                                <tr class="odd">
+                                    <td class="cwTrackCell">
+                                        <a id="track1" class="cwTrack">The Beach Boys-Little Deuce Coupe</a>
+                                    </td>
+                                </tr>
+                                <tr class="even">
+                                    <td class="cwTrackCell">
+                                        <a id="track2" class="cwTrack">The Beach Boys-409</a>
+                                    </td>
+                                </tr>
+                                <tr class="odd">
+                                    <td class="cwTrackCell">
+                                        <a id="track3" class="cwTrack">The Beach Boys-Little Honda</a>
+                                    </td>
+                                </tr>
+                                <tr class="even">
+                                    <td class="cwTrackCell">
+                                        <a id="track4" class="cwTrack">The Beach Boys-Cherry, Cherry Coupe</a>
+                                    </td>
+                                </tr>
+                                <tr class="odd">
+                                    <td class="cwTrackCell">
+                                        <a id="track5" class="cwTrack">The Beach Boys-Custom Machine</a>
+                                    </td>
+                                </tr>
+                                <tr class="even">
+                                    <td class="cwTrackCell">
+                                        <a id="track6" class="cwTrack">The Beach Boys-Our Car Club</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="footer" class="ui-widget-header">
+                        <i class="fa fa-copyright"></i> Roberts Car Wash, <span id="currYr"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
