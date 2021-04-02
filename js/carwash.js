@@ -165,7 +165,7 @@ var CAR_WASH = function () {
             }
             
             initCopyRightYear();
-            initToolTips();
+            //initToolTips();
             
             NAV.init();
             bindJPlayer();
