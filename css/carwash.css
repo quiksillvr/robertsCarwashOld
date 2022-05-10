@@ -205,6 +205,7 @@ p {
 
 .quote{
     font-style: italic;
+    font-size: 1.2em;
 }
 
 .ui-tooltip {
@@ -344,4 +345,8 @@ p {
     height: 15px;
     padding: 4px 8px 5px 5px;
     text-align: right;
+}
+
+.ui-widget{
+    font-size: 1.0em !important;
 }

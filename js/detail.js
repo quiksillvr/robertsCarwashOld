@@ -180,8 +180,6 @@ var DETAIL = function () {
         $.each(detailSlidePhotos, function (index, value) {
             (new Image()).src = value;
         });
-
-        //(new Image()).src = 'path/to/img';
     }
 
     function prepareDialogSlide(microImgSrc) {
@@ -254,23 +252,6 @@ var DETAIL = function () {
                 }
                 $('.products').css("display", "inline");
 
-//                $(document).tooltip({
-//                    show: {
-//                        effect: "slideDown",
-//                        delay: 250
-//                    },
-//                    hide: {
-//                        effect: "explode",
-//                        delay: 250
-//                    },
-//                    position: {
-//                        my: "left top",
-//                        at: "left+10 bottom"
-//                    }
-//                });
-//                $(".ui-button").tooltip({disabled: true});
-//                $("button").tooltip({disabled: true});
-
                 var cWidth = $('#content').width();
                 if (cWidth && cWidth > 675) {
                     $('#detailPackageDiv').css("width", "675px");
@@ -278,74 +259,6 @@ var DETAIL = function () {
                     $('#detailPackageDiv').css("width", "100%");
                 }
                 $('#detailPackageDiv').width(cWidth);
-
-                var oTable = $('#detailPackageTable').dataTable({
-                    "bJQueryUI": true,
-                    "bPaginate": false,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": false,
-                    "bSortClasses": false,
-                    "bInfo": false,
-                    "bAutoWidth": true
-                });
-
-                var oDetailListTable = $('#detailPackageListing').dataTable({
-                    "bJQueryUI": true,
-                    "bPaginate": false,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": false,
-                    "bSortClasses": false,
-                    "bInfo": false,
-                    "bAutoWidth": false
-                });
-
-                var oIndServicesTable = $('#indServicesTable').dataTable({
-                    "bJQueryUI": true,
-                    "bPaginate": false,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": false,
-                    "bSortClasses": false,
-                    "bInfo": false,
-                    "bAutoWidth": false
-                });
-
-                oIndServicesTable.$('td').hover(function () {
-                    var iCol = $('td', this.parentNode).index(this) % 7;
-                    if (iCol !== 0) {
-                        $('td:nth-child(' + (iCol + 1) + ')', oIndServicesTable.$('tr')).addClass('highlighted');
-                    }
-                }, function () {
-                    oIndServicesTable.$('td.highlighted').removeClass('highlighted');
-                });
-
-                //svar adjHoverRow = null;
-                oTable.$('td').hover(function () {
-                    var iCol = $('td', this.parentNode).index(this) % 7;
-                    if (iCol !== 0) {
-                        $('td:nth-child(' + (iCol + 1) + ')', oTable.$('tr')).addClass('highlighted');
-                        $('td', oDetailListTable.$('tr:nth-child(' + iCol + ')')).addClass('highlighted');
-                    }
-                }, function () {
-                    oTable.$('td.highlighted').removeClass('highlighted');
-                    oDetailListTable.$('td.highlighted').removeClass('highlighted');
-                });
-
-                var iDetailListingRow = 0;
-                var iDetailListingCol = 0;
-                oDetailListTable.$("tr").hover(
-                        function () {
-                            iDetailListingRow = 0;
-                            iDetailListingCol = 0;
-                            iDetailListingRow = $('tr', this.parentNode).index(this) % 7;
-                            iDetailListingCol = iDetailListingRow + 2;
-                            oTable.$('td:nth-child(' + (iDetailListingCol) + ')').addClass('highlighted');
-                        },
-                        function () {
-                            oTable.$('td:nth-child(' + (iDetailListingCol) + ')').removeClass('highlighted');
-                        });
 
                 bindSlideShow();
 
